@@ -1,6 +1,6 @@
 # VL.SharpRegion
 
-Example process node regin for [vvvv](https://vvvv.org)
+Example process node region for [vvvv](https://vvvv.org)
 
 ### Credits
 
