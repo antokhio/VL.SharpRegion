@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="BQuw78zMdgKPexrWxa9qqt" LanguageVersion="2025.7.0" Version="0.128">
+  <NugetDependency Id="Cgp5HEpp73GOVnlz6CP5pt" Location="VL.CoreLib" Version="2025.7.0" />
+  <Patch Id="MV7HMe13LLgPUcLSLKqHdP">
+    <Canvas Id="BJp89jUBOIENhY8ppx2wDQ" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Ht8FNwFcmWsN2EiNAxoh6k">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="VXMJ3ZlVMNpPSf1T2QqqE6">
+        <Canvas Id="GyVk1Xu8OLNOWZBqLXURMK" CanvasType="Group">
+          <Node Bounds="384,278,112,90" Id="CT2YKDTVVZ9LaAKJX0Nclu">
+            <p:NodeReference LastCategoryFullName="SharpRegion" LastDependency="VL.SharpRegion.dll">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="SharpRegion" />
+              <Choice Kind="ProcessAppFlag" Name="SharpRegion" />
+            </p:NodeReference>
+            <Pin Id="DmGq5XL1mBHPZGao51QXwF" Name="Output" Kind="StateOutputPin" />
+            <Patch Id="TZZRzZYKEYYMXnJkQYqssc" ManuallySortedPins="true">
+              <Patch Id="VjWNk5XJ7cQOKzsLNRV0eD" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="QyTtUJj5GWTPEFPbBPIHXC" Name="Update" ParticipatingElements="RFu3asEldd4Mvo0reuJHoY" ManuallySortedPins="true" />
+              <Patch Id="SlUFSsgcl19MFkHa75N5ns" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="398,301,45,19" Id="B0LXfCPZBdRQUKCuT7xBeH">
+                <p:NodeReference LastCategoryFullName="Animation" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="LFO" />
+                </p:NodeReference>
+                <Pin Id="B7geDG4mPwaPTjWaWegZv6" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                <Pin Id="RAic5NMjXfdQOcytAHwts4" Name="Clock" Kind="InputPin" IsHidden="true" />
+                <Pin Id="LehDyrXiYxMOK9KTS3A0g1" Name="New Clock" Kind="InputPin" IsHidden="true" />
+                <Pin Id="FkZTAqboV68MRvq2DBeGZ8" Name="Period" Kind="InputPin" />
+                <Pin Id="Hj67RpfoIsqLBRsgETg9Tk" Name="Pause" Kind="InputPin" />
+                <Pin Id="MgofW1bbgOtMEMyph4aPz1" Name="Reset" Kind="ApplyPin" />
+                <Pin Id="J4MBYXjQwJEMHbt0gUhF9b" Name="Phase" Kind="OutputPin" />
+                <Pin Id="U1CRm6VzILENtHw7ibbLdY" Name="On New Cycle" Kind="OutputPin" />
+                <Pin Id="PZYj0RJK4DULyr7zfIYkpz" Name="Cycles" Kind="OutputPin" />
+              </Node>
+              <Pad Id="UByiwkYafTEPiSNW7RSQi1" Comment="Phase" Bounds="400,340,35,15" ShowValueBox="true" isIOBox="true" />
+            </Patch>
+          </Node>
+        </Canvas>
+        <Patch Id="Cj2HdmhCqv2ODvKtWjFq7G" Name="Create" />
+        <Patch Id="KPDHJKDccEQORu0SAiINzi" Name="Update" />
+        <ProcessDefinition Id="PtcjoUjcvNPMxdKFgSUoai">
+          <Fragment Id="N1aCClg9co2MwdPcOku3wE" Patch="Cj2HdmhCqv2ODvKtWjFq7G" Enabled="true" />
+          <Fragment Id="UDliUFRMO53QV6elz4VsQj" Patch="KPDHJKDccEQORu0SAiINzi" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="RFu3asEldd4Mvo0reuJHoY" Ids="J4MBYXjQwJEMHbt0gUhF9b,UByiwkYafTEPiSNW7RSQi1" />
+      </Patch>
+    </Node>
+  </Patch>
+  <PlatformDependency Id="STaBtN3Z5O3PhrIcODXvU4" Location="./bin/Debug/net8.0/VL.SharpRegion.dll" />
+</Document>
