@@ -19,6 +19,9 @@ namespace VL.SharpRegion
         private IDisposable _currentScope;
 
         [Fragment]
+        public int Test { get; set; }
+
+        [Fragment]
         public ProviderRegion(NodeContext nodeContext)
         {
             _nodeContext = nodeContext;

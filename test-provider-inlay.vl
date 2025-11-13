@@ -64,6 +64,17 @@
                 <Pin Id="NYuco9P1bAvLhZz1iBGIXe" Name="Result" Kind="OutputPin" />
               </Node>
               <Pad Id="McLSURMC8X5LNt5q7L9r06" Comment="" Bounds="1110,430,190,132" ShowValueBox="true" isIOBox="true" />
+              <Node Bounds="854,500,70,26" Id="VeEufNASp6IMpQSNZil2jy">
+                <p:NodeReference LastCategoryFullName="SharpRegion.ProviderRegion" LastDependency="VL.SharpRegion.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <FullNameCategoryReference ID="SharpRegion.ProviderRegion" />
+                  <Choice Kind="OperationCallFlag" Name="Test" />
+                </p:NodeReference>
+                <Pin Id="IuDxX3LIs0zN8OwhY4wtaC" Name="Input" Kind="StateInputPin" />
+                <Pin Id="JGRZZE7ukuRLGadyFRGpNZ" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="Drqg7YAlmliOBwpvmRZ1ik" Name="Test" Kind="OutputPin" />
+              </Node>
+              <Pad Id="IVJZgvkh6jKOr11QJ1X1pr" Comment="Test" Bounds="921,540,35,15" ShowValueBox="true" isIOBox="true" />
             </Patch>
             <Pin Id="QOk6jO9ZeHaMIrp3Dmxfs0" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="Lztg5fInaNULC03fMwjnpS" Name="Output" Kind="OutputPin" />
@@ -81,7 +92,10 @@
             <Pin Id="Mk4wkodDuYNLkD4hn4Z69F" Name="Update" Kind="ApplyPin" />
             <Patch Id="P22MIqCL5oxLxrkcuWlu47" ManuallySortedPins="true">
               <Patch Id="Jx4O0VVzPIDPBTVTFziD7o" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="EgRD0YaRwMCOrg0Vy4Py1g" Name="Execute" ManuallySortedPins="true" />
+              <Patch Id="EgRD0YaRwMCOrg0Vy4Py1g" Name="Execute" ManuallySortedPins="true">
+                <Pin Id="JbVrw8f5eCtNRhdAkF7jEZ" Name="Context String" Kind="InputPin" />
+                <Pin Id="Q7adZDnqkh2MuHu8Surc3u" Name="Context Float" Kind="InputPin" />
+              </Patch>
               <Patch Id="AkVe6HUttAhM16xrszfgii" Name="Dispose" ManuallySortedPins="true" />
             </Patch>
           </Node>
@@ -103,6 +117,8 @@
         <Link Id="IxNr0TJPffPOYTNuRMiZLD" Ids="Mt6NuJO2WxGOiC9KhhrHS8,SQnMIGZjISXNRJ4dWijLWN" />
         <Link Id="Kz18g00XRg1OsDhum3Wuu6" Ids="Ahh0Zu4LeltOk3Ry2fWuOH,LXIqHbYdYtKNMAHUIeSRY1" />
         <Link Id="BIpLgcj2DXvOS9cu9gtotX" Ids="NYuco9P1bAvLhZz1iBGIXe,McLSURMC8X5LNt5q7L9r06" />
+        <Link Id="QcPS9dhcQqROL24JBfxccE" Ids="LXIqHbYdYtKNMAHUIeSRY1,IuDxX3LIs0zN8OwhY4wtaC" />
+        <Link Id="Ts3mUD7Sps4QMO2qEHWrAB" Ids="Drqg7YAlmliOBwpvmRZ1ik,IVJZgvkh6jKOr11QJ1X1pr" />
       </Patch>
     </Node>
   </Patch>
