@@ -73,6 +73,26 @@
               <Choice Kind="MutableTypeFlag" Name="Object" />
             </p:TypeAnnotation>
           </Pad>
+          <Node Bounds="448,231,80,86" Id="GKIwSMI9IjQNwYR9QyRrwi">
+            <p:NodeReference LastCategoryFullName="SharpRegion" LastDependency="VL.SharpRegion.dll">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="InlayRegion" />
+            </p:NodeReference>
+            <Pin Id="Mk4wkodDuYNLkD4hn4Z69F" Name="Update" Kind="ApplyPin" />
+            <Patch Id="P22MIqCL5oxLxrkcuWlu47" ManuallySortedPins="true">
+              <Patch Id="Jx4O0VVzPIDPBTVTFziD7o" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="EgRD0YaRwMCOrg0Vy4Py1g" Name="Execute" ManuallySortedPins="true" />
+              <Patch Id="AkVe6HUttAhM16xrszfgii" Name="Dispose" ManuallySortedPins="true" />
+            </Patch>
+          </Node>
+          <Pad Id="PUglKvn4mgkPZBC5FZCoKc" Bounds="496,190,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="Cj2HdmhCqv2ODvKtWjFq7G" Name="Create" />
         <Patch Id="KPDHJKDccEQORu0SAiINzi" Name="Update" />
