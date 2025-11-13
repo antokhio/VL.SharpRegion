@@ -9,6 +9,12 @@ namespace VL.SharpRegion
 {
     public class ProviderStore : ScopedValueStore { }
 
+    /************************************************************************
+     * WARNING: CONTAINS ERROR DO NOT USE
+     *
+     * Stored just for reference to pin point errro
+     ***********************************************************************/
+    [Obsolete]
     [ProcessNode(FragmentSelection = FragmentSelection.Explicit, HasStateOutput = true)]
     public class ProviderRegion : IDisposable
     {
@@ -54,7 +60,8 @@ namespace VL.SharpRegion
                 // Bind store inputs
                 _store.Configurate(storeInputs);
 
-                // Bind store values
+                // THIS IS INCORRENT see the ContextProviderRegion for correct implementation
+                // Bind store
                 _currentScope = _store.ActivateScope(_nodeContext, stroeValues);
 
                 _invalidate = false;
@@ -71,6 +78,7 @@ namespace VL.SharpRegion
             if (_patch != null)
                 IDisposableUtils.TryDispose(_patch, out var patchDisposed);
 
+            // THIS WOULD DESTROY SCOPE GLOBALLY see the ContextProviderRegion for correct implementation
             _currentScope?.Dispose();
         }
 

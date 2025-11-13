@@ -3,6 +3,9 @@ using VL.Core.PublicAPI;
 
 namespace VL.SharpRegion;
 
+/// <summary>
+/// Example simple inlay region
+/// </summary>
 [ProcessNode]
 [Region(SupportedBorderControlPoints = ControlPointType.Border)]
 public class InlayRegion : IRegion<InlayRegion.IInlay>
