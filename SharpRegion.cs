@@ -41,7 +41,13 @@ namespace VL.SharpRegion
         }
 
         [Fragment]
-        public void Update(ICustomRegion input) { }
+        public void Update(ICustomRegion input)
+        {
+            if (input.PatchHasChanged)
+            {
+                _currentPatch?.Update(Spread<object>.Empty, out _, Spread<object>.Empty);
+            }
+        }
 
         public ICustomRegionPatch CreateRegionPatch(
             NodeContext context,
@@ -52,8 +58,10 @@ namespace VL.SharpRegion
             // Create the user's patch and inject the record
             initialOutputs = Spread<object>.Empty;
 
+            _currentPatch = new SharpRegionPatch(_sharedRecord);
+
             // What to do here ???
-            return new SharpRegionPatch(_sharedRecord);
+            return _currentPatch;
         }
 
         // Question: How to get actual patch in here?

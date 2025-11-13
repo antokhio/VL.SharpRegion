@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="VXMJ3ZlVMNpPSf1T2QqqE6">
         <Canvas Id="GyVk1Xu8OLNOWZBqLXURMK" CanvasType="Group">
-          <Node Bounds="384,278,112,90" Id="CT2YKDTVVZ9LaAKJX0Nclu">
+          <Node Bounds="410,257,112,100" Id="CT2YKDTVVZ9LaAKJX0Nclu">
             <p:NodeReference LastCategoryFullName="SharpRegion" LastDependency="VL.SharpRegion.dll">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <CategoryReference Kind="Category" Name="SharpRegion" />
@@ -26,7 +26,7 @@
               <Patch Id="VjWNk5XJ7cQOKzsLNRV0eD" Name="Create" ManuallySortedPins="true" />
               <Patch Id="QyTtUJj5GWTPEFPbBPIHXC" Name="Update" ParticipatingElements="RFu3asEldd4Mvo0reuJHoY" ManuallySortedPins="true" />
               <Patch Id="SlUFSsgcl19MFkHa75N5ns" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="398,301,45,19" Id="B0LXfCPZBdRQUKCuT7xBeH">
+              <Node Bounds="445,280,45,19" Id="B0LXfCPZBdRQUKCuT7xBeH">
                 <p:NodeReference LastCategoryFullName="Animation" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="LFO" />
@@ -41,9 +41,20 @@
                 <Pin Id="U1CRm6VzILENtHw7ibbLdY" Name="On New Cycle" Kind="OutputPin" />
                 <Pin Id="PZYj0RJK4DULyr7zfIYkpz" Name="Cycles" Kind="OutputPin" />
               </Node>
-              <Pad Id="UByiwkYafTEPiSNW7RSQi1" Comment="Phase" Bounds="400,340,35,15" ShowValueBox="true" isIOBox="true" />
+              <Pad Id="UByiwkYafTEPiSNW7RSQi1" Comment="Phase" Bounds="426,330,35,15" ShowValueBox="true" isIOBox="true" />
             </Patch>
           </Node>
+          <Node Bounds="379,401,98,26" Id="CilQFaqQx7XPgbko5WiTlb">
+            <p:NodeReference LastCategoryFullName="SharpRegion.SharpRegion" LastDependency="VL.SharpRegion.dll">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="SharpRegion.SharpRegion" />
+              <Choice Kind="OperationCallFlag" Name="PatchHasChanged" />
+            </p:NodeReference>
+            <Pin Id="PVEGCrLSefUMGmil0jDmxN" Name="Input" Kind="StateInputPin" />
+            <Pin Id="Te8Fsv7ATG6PBG9830OgMn" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="VXLIkEdriwjLNCgbhI1Bvq" Name="Patch Has Changed" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Lfe1nHhoFMjO1QTgFjm6fP" Comment="Patch Has Changed" Bounds="485,460,35,35" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="Cj2HdmhCqv2ODvKtWjFq7G" Name="Create" />
         <Patch Id="KPDHJKDccEQORu0SAiINzi" Name="Update" />
@@ -52,6 +63,8 @@
           <Fragment Id="UDliUFRMO53QV6elz4VsQj" Patch="KPDHJKDccEQORu0SAiINzi" Enabled="true" />
         </ProcessDefinition>
         <Link Id="RFu3asEldd4Mvo0reuJHoY" Ids="J4MBYXjQwJEMHbt0gUhF9b,UByiwkYafTEPiSNW7RSQi1" />
+        <Link Id="BtpAjUrXVsQNqkTNUrsZ0j" Ids="DmGq5XL1mBHPZGao51QXwF,PVEGCrLSefUMGmil0jDmxN" />
+        <Link Id="N9ZQNBvU6k8LPHoIO4gOnF" Ids="VXLIkEdriwjLNCgbhI1Bvq,Lfe1nHhoFMjO1QTgFjm6fP" />
       </Patch>
     </Node>
   </Patch>
