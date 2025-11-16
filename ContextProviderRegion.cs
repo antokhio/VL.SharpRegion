@@ -9,7 +9,7 @@ public class ContextProviderStore : ScopedValueStore { }
 
 [ProcessNode(HasStateOutput = true)]
 [Region(SupportedBorderControlPoints = ControlPointType.None)]
-public class ContextProviderRegion : IRegion<ContextProviderRegion.IInlay>, IDisposable
+public class ContextProviderRegion : IRegion<ContextProviderRegion.IInlay>
 {
     public const string CONTEXT_PROVIDER_REGION = "ContextProviderRegion";
 
@@ -17,21 +17,12 @@ public class ContextProviderRegion : IRegion<ContextProviderRegion.IInlay>, IDis
     private readonly Dictionary<OutputDescription, object?> _outputs = new();
     private readonly ContextProviderStore _store = new();
 
-    private IDisposable? _currentScope;
     private IInlay? inlay;
     private NodeContext? _nodeContext;
 
     public ContextProviderRegion(NodeContext nodeContext)
     {
         _nodeContext = nodeContext;
-    }
-
-    public int Test { get; set; }
-
-    public void Update()
-    {
-        if (inlay is null)
-            return;
 
         // Create signatures for lookup inside region
         var storeInputs = new[]
@@ -44,11 +35,19 @@ public class ContextProviderRegion : IRegion<ContextProviderRegion.IInlay>, IDis
             ),
         };
 
-        // Create references for lookup inside region
-        var storeValues = new object[] { this };
-
         // Bind store inputs (only clears if inputs changed)
         _store.Configurate(storeInputs);
+    }
+
+    public int Test { get; set; }
+
+    public void Update()
+    {
+        if (inlay is null)
+            return;
+
+        // Create references for lookup inside region
+        var storeValues = new object[] { this };
 
         // Activate scope for THIS execution
         // This pushes a new DataLayer onto the stack
@@ -93,11 +92,6 @@ public class ContextProviderRegion : IRegion<ContextProviderRegion.IInlay>, IDis
     void IRegion<IInlay>.RetrieveOutput(in OutputDescription cp, out object? outerValue)
     {
         _outputs.TryGetValue(cp, out outerValue);
-    }
-
-    public void Dispose()
-    {
-        _currentScope?.Dispose();
     }
 
     // Static helper to retrieve the ContextProviderRegion from inside the region
